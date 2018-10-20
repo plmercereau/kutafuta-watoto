@@ -2,7 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import L from 'leaflet'
+import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import 'leaflet/dist/leaflet.css'
+import './plugins/element.js'
+
+Vue.component('l-marker-cluster', Vue2LeafletMarkerCluster)
+Vue.use(require('vue-moment'))
 
 delete L.Icon.Default.prototype._getIconUrl
 
